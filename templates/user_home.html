@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Dossier</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200">
+    <div class="max-w-2xl mx-auto p-8 bg-white rounded shadow-md">
+        <h1 class="text-2xl mb-4 font-semibold">Contenu du dossier: {{ folder_name }}</h1>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li class="mb-2 bg-blue-100 border-l-4 border-blue-500 text-blue-700 px-4 py-2 rounded" role="alert">
+                {{ message }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <h2 class="text-xl mb-2">Fichiers</h2>
+        <ul class="list-disc pl-8">
+            {% for file in files %}
+            <li>{{ file }} <a href="{{ url_for('download_file', filename=file) }}" class="text-blue-500 hover:underline">Télécharger</a></li>
+            {% endfor %}
+        </ul>
+
+        <h2 class="text-xl mb-2 mt-4">Sous-dossiers</h2>
+        <ul class="list-disc pl-8">
+            {% for subfolder in subfolders %}
+            <li>{{ subfolder }} 
+                <a href="{{ url_for('view_folder_contents', path=folder_name+'/'+subfolder) }}" class="text-blue-500 hover:underline">Afficher le contenu</a>
+                <a href="{{ url_for('download_folder', foldername=subfolder) }}" class="text-blue-500 hover:underline">Télécharger le dossier</a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h3 class="text-xl mt-4">Transfert - Dossiers - Fichiers</h3>
+        <ul>
+            <li><a href="{{ url_for('transfer_ff') }}" class="text-blue-500 hover:underline">Transfert</a></li>
+        </ul>
+
+        <a href="{{ url_for('logout') }}" class="block mt-8 text-blue-500 hover:underline">Se déconnecter</a>
+    </div>
+</body>
+
+</html>
+

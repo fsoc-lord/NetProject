@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200">
+    <!-- Navbar -->
+    <nav class="bg-blue-500 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div>
+                <a href="#" class="text-white text-lg font-semibold">NetProject V1.0</a>
+            </div>
+            <div>
+                <a href="{{ url_for('home') }}" class="text-white hover:underline mx-2">Accueil</a>
+                <a href="{{ url_for('support') }}" class="text-white hover:underline mx-2">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-md mx-auto p-8 bg-white rounded shadow-md mt-4">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>
