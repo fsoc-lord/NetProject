@@ -10,22 +10,49 @@ Le projet est développé avec Python et utilise Flask pour la création de l'ap
 
 ## Fonctionnalités
 
-- Liste des fonctionnalités principales
+- **Authentification** : Connexion sécurisée avec vérification des utilisateurs et gestion des sessions.
+- **Gestion de fichiers** : Téléchargement et visualisation de fichiers.
+- **Compression de dossiers** : Téléchargement de dossiers entiers sous forme de fichiers ZIP.
+- **Interface graphique** : Interface tkinter pour démarrer et arrêter l'application Flask.
+
 
 ## Installation
 
-```python
-print("Hello, World!")
-```
+1. **Clonez le dépôt:**
+   ```bash
+   git clone https://github.com/fsoc-lord/netproject.git
+   cd netproject
+2. **Installer les dépendances:**
+   ```python
+   pip install -r requirements.txt
+3. **OPTIONNEL**
+   Pour toutes utilisateurs souhaitant rendre cet application web en application exécutable sur son bureau, il suffit:
 
-## Utilisation
+   - Installer pyinstaller :
+     
+        ```python
+           pip install pyinstaller
+   -  Lancer pyinstaller pour rendre l'application web en application executable :
+     
+      ```python
+       pyinstaller --onefile "app.py" --name "NetProjectV1.0"
+   -  Sortez le fichier NetProjectV1.0 du dossier /dist vers /Netprojet
+     
+   -  Cliquer sur l'exécutable et le tour est joué !
+  
+5.   **Utilisation:**
 
-Exemples d'utilisation et captures d'écran
+   - Lancer l'application :
+     
+     ```python
+     flask run
+     python3 apptk.py
+     python  apptk.py
+     
+  - Accédez à l'application :
 
-## Contribuer
-
-Instructions pour contribuer au projet
-
-## Licence
-
-Informations sur la licence du projet
+    Ouvrez un navigateur et accèder avec l'adresse ip que votre application tkinter affiche pour utiliser l'application -> ex. 192.168.1.10:5000 
+    
+6. **Contribution:**
+   
+   Les contributions au projet sont les bienvenues. Pour des suggestions d'amélioration, veuillez ouvrir une issue pour discuter des changements proposés.
