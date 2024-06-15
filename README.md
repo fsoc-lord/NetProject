@@ -25,6 +25,13 @@ Le projet est développé avec Python et utilise Flask pour la création de l'ap
 2. **Installer les dépendances:**
    ```python
    pip install -r requirements.txt
+3. **Fichier de configuration:**
+   - Vous devez configurer les 3 chemins auquels les dossiers , les fichiers et les data all user.
+       ```ini
+      [SETTINGS]
+     ALL_USER = /chemin/vers/dossier/utilisateurs
+     FILES_USER = /chemin/vers/dossier/fichiers
+      FOLDER_USER = /chemin/vers/dossier/dossiers
 3. **OPTIONNEL**
    Pour toutes utilisateurs souhaitant rendre cet application web en application exécutable sur son bureau, il suffit:
 
@@ -40,7 +47,7 @@ Le projet est développé avec Python et utilise Flask pour la création de l'ap
      
    -  Cliquer sur l'exécutable et le tour est joué !
   
-5.   **Utilisation:**
+## **Utilisation:**
 
    - Lancer l'application :
      
@@ -52,7 +59,7 @@ Le projet est développé avec Python et utilise Flask pour la création de l'ap
   - Accédez à l'application :
 
     Ouvrez un navigateur et accèder avec l'adresse ip que votre application tkinter affiche pour utiliser l'application -> ex. 192.168.1.10:5000 
-    
-6. **Contribution:**
+
+## **Contribution:**
    
    Les contributions au projet sont les bienvenues. Pour des suggestions d'amélioration, veuillez ouvrir une issue pour discuter des changements proposés.
