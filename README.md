@@ -19,16 +19,22 @@ Le projet est développé avec Python et utilise Flask pour la création de l'ap
 ## Installation
 
 1. **Clonez le dépôt:**
+   
    ```bash
    git clone https://github.com/fsoc-lord/netproject.git
    cd netproject
-2. **Installer les dépendances:**
+   
+3. **Installer les dépendances:**
+   
    ```python
    pip install -r requirements.txt
-3. **Fichier de configuration:**
+   
+5. **Fichier de configuration:**
+   
    - Vous devez configurer les 3 chemins auquels les dossiers , les fichiers et les data all user. [SETTINGS] 
    - Mots de passe et Username de l'admin par défault est admin admin -> vous pouvez seulement le mots de passe. [ADMIN]
    - Ajouter ou modifier les extensions autoriser pour les uploads de fichier -> [SETTINGS] = ALLOWED_EXTENSIONS
+   - 
        ```ini
        [ADMIN]
       USERNAME = admin
@@ -41,7 +47,9 @@ Le projet est développé avec Python et utilise Flask pour la création de l'ap
      ALL_USER = /chemin/vers/dossier/utilisateurs
      FILES_USER = /chemin/vers/dossier/fichiers
       FOLDER_USER = /chemin/vers/dossier/dossiers
+       
 3. **OPTIONNEL**
+   
    Pour toutes utilisateurs souhaitant rendre cet application web en application exécutable sur son bureau, il suffit:
 
    - Installer pyinstaller :
