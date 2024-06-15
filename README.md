@@ -14,7 +14,9 @@ Le projet est développé avec Python et utilise Flask pour la création de l'ap
 
 ## Installation
 
-Instructions pour l'installation et la configuration
+```python
+print("Hello, World!")
+```
 
 ## Utilisation
 
